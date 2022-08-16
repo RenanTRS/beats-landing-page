@@ -1,7 +1,15 @@
-import styles from './App.module.scss'
+import { Footer } from './components/Footer'
+import { Header } from './components/Header'
+import { Main } from './components/Main'
 
 function App() {
-  return <div className={styles.app}></div>
+  return (
+    <>
+      <Header />
+      <Main />
+      <Footer />
+    </>
+  )
 }
 
 export default App
