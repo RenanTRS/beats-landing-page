@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
-/* :root {
+:root {
   --header-height: 3rem;
 
   --hue-color: 206;
@@ -55,48 +55,4 @@
     --small-font-size: .875rem;
     --smaller-font-size: .813rem;
   }
-} */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html{
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: var(--header-height) 0 0 0;
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
-  background-color: var(--body-color);
-  color: var(--text-color);
-}
-
-h1, h2, h3 {
-  color: var(--title-color);
-}
-
-ul{
-  list-style: none;
-}
-
-a{
-  text-decoration: none;
-}
-
-button, input {
-  border: none;
-  outline: none;
-}
-
-button{
-  cursor: none;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
 }
