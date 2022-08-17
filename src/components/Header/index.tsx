@@ -7,6 +7,7 @@ import logoImg from '../../assets/img/logo.svg'
 
 export const Header = () => {
   const [isShowMenu, setIsShowMenu] = useState<boolean>(false)
+  const [isScrollDown, setIsScrollDown] = useState<boolean>(false)
 
   const items = ['Home', 'Specs', 'Case', 'Products']
 
@@ -14,8 +15,22 @@ export const Header = () => {
     setIsShowMenu(value)
   }
 
+  const scrollHeaderY = () => {
+    const y = window.scrollY
+
+    if (y < 50) {
+      setIsScrollDown(false)
+    } else {
+      setIsScrollDown(true)
+    }
+  }
+  window.addEventListener('scroll', scrollHeaderY)
+
   return (
-    <header className={s.header} id="header">
+    <header
+      className={`${s.header} ${isScrollDown ? s.scrollHeader : ''}`}
+      id="header"
+    >
       <nav className={`container ${s.nav}`}>
         <a href="#" className={s.logo}>
           <img src={logoImg} alt="" />
@@ -30,7 +45,7 @@ export const Header = () => {
           <ul className={s.list}>
             {items.map((item) => {
               return (
-                <li className="nave__item">
+                <li className="nave__item" key={item}>
                   <a
                     href={`#${item.toLowerCase()}`}
                     className={s.link}
