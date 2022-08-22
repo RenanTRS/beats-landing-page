@@ -6,11 +6,13 @@ import { Button } from '../Button'
 import { Info } from 'phosphor-react'
 import { Section } from '../Section'
 import { Container } from '../Container'
+import { Title } from '../Title'
 
 export const Case = () => {
   return (
-    <Section>
-      <h2 className="section__title section__title-gradient">Case</h2>
+    <Section grid={true}>
+      {/* <h2 className="section__title section__title-gradient">Case</h2> */}
+      <Title>Case</Title>
 
       <Container containerClass={s.case__container}>
         <div>

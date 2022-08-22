@@ -2,11 +2,13 @@ import homeImg from '../../assets/img/home.png'
 import s from './Home.module.scss'
 
 import { Handbag } from 'phosphor-react'
+import { Button } from '../Button'
+import { Container } from '../Container'
 
 export const Home = () => {
   return (
-    <section className={`${s.home} section`}>
-      <div className={`${s.home__container} container grid`}>
+    <section className={`section`}>
+      <Container containerClass={s.home__container}>
         <div>
           <img src={homeImg} alt="" className={s.home__img} />
         </div>
@@ -27,16 +29,16 @@ export const Home = () => {
               delivering first-rate playback.
             </p>
 
-            <a href="#" className={`${s.button} ${s.button__flex}`}>
-              <span className={`${s.button__flex} ${s.button__icon}`}>
+            <Button>
+              <span className={`button__flex button__icon`}>
                 <Handbag /> Add to Bag
               </span>
 
               <span className={s.home__price}>$299</span>
-            </a>
+            </Button>
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   )
 }

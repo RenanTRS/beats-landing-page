@@ -1,4 +1,3 @@
-import { BatteryCharging, Bluetooth, Microphone, Plug } from 'phosphor-react'
 import s from './Specifications.module.scss'
 
 import bluetoothImg from '../../assets/img/specs/specs-bluetooth.svg'
@@ -6,6 +5,9 @@ import batteryImg from '../../assets/img/specs/specs-battery.svg'
 import plugImg from '../../assets/img/specs/specs-plug.svg'
 import microphoneImg from '../../assets/img/specs/specs-microphone.svg'
 import specsImg from '../../assets/img/specs/specs.png'
+import { Section } from '../Section'
+import { Container } from '../Container'
+import { Title } from '../Title'
 
 export const Specifications = () => {
   const specsData = [
@@ -31,16 +33,19 @@ export const Specifications = () => {
     }
   ]
   return (
-    <section className={`${s.specs} section grid`}>
-      <h2 className="section__title section__title-gradient">Specs</h2>
+    <Section sectionClass={s.specs} grid={true}>
+      {/* <h2 className="section__title section__title-gradient">Specs</h2> */}
+      <Title>Specs</Title>
 
-      <div className={`${s.specs__container} container grid`}>
+      <Container containerClass={s.specs__container}>
         <div className={`${s.specs__content} grid`}>
           {specsData.map((specData) => {
             return (
               <div key={specData.title} className={s.specs__data}>
                 <img src={specData.img} className={s.specs__icon} alt="" />
+
                 <h3 className={s.specs__title}>{specData.title}</h3>
+
                 <span className={s.specs__subtitle}>
                   {specData.description}
                 </span>
@@ -52,9 +57,7 @@ export const Specifications = () => {
         <div>
           <img src={specsImg} alt="" className={s.specs__img} />
         </div>
-      </div>
-    </section>
+      </Container>
+    </Section>
   )
 }
-
-//37:34 - video
