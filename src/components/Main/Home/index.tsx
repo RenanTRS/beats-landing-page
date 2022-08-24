@@ -1,9 +1,9 @@
-import homeImg from '../../assets/img/home.png'
+import homeImg from '../../../assets/img/home.png'
 import s from './Home.module.scss'
 
 import { Handbag } from 'phosphor-react'
-import { Button } from '../Button'
-import { Container } from '../Container'
+import { Button } from '../../Button'
+import { Container } from '../../Container'
 
 export const Home = () => {
   return (
@@ -29,13 +29,13 @@ export const Home = () => {
               delivering first-rate playback.
             </p>
 
-            <Button>
+            <Button.LinkButton>
               <span className={`button__flex button__icon`}>
                 <Handbag /> Add to Bag
               </span>
 
               <span className={s.home__price}>$299</span>
-            </Button>
+            </Button.LinkButton>
           </div>
         </div>
       </Container>

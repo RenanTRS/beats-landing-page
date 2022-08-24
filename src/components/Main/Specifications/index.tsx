@@ -1,13 +1,13 @@
 import s from './Specifications.module.scss'
 
-import bluetoothImg from '../../assets/img/specs/specs-bluetooth.svg'
-import batteryImg from '../../assets/img/specs/specs-battery.svg'
-import plugImg from '../../assets/img/specs/specs-plug.svg'
-import microphoneImg from '../../assets/img/specs/specs-microphone.svg'
-import specsImg from '../../assets/img/specs/specs.png'
-import { Section } from '../Section'
-import { Container } from '../Container'
-import { Title } from '../Title'
+import bluetoothImg from '../../../assets/img/specs/specs-bluetooth.svg'
+import batteryImg from '../../../assets/img/specs/specs-battery.svg'
+import plugImg from '../../../assets/img/specs/specs-plug.svg'
+import microphoneImg from '../../../assets/img/specs/specs-microphone.svg'
+import specsImg from '../../../assets/img/specs/specs.png'
+import { Section } from '../../Section'
+import { Container } from '../../Container'
+import { Title } from '../../Title'
 
 export const Specifications = () => {
   const specsData = [
@@ -34,7 +34,6 @@ export const Specifications = () => {
   ]
   return (
     <Section sectionClass={s.specs} grid={true}>
-      {/* <h2 className="section__title section__title-gradient">Specs</h2> */}
       <Title>Specs</Title>
 
       <Container containerClass={s.specs__container}>

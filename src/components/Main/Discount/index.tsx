@@ -1,10 +1,10 @@
 import { Handbag } from 'phosphor-react'
-import { Button } from '../Button'
-import { Container } from '../Container'
-import { Section } from '../Section'
+import { Button } from '../../Button'
+import { Container } from '../../Container'
+import { Section } from '../../Section'
 
 import s from './Discount.module.scss'
-import discountImg from '../../assets/img/discount.png'
+import discountImg from '../../../assets/img/discount.png'
 
 export const Discount = () => {
   return (
@@ -17,10 +17,10 @@ export const Discount = () => {
 
           <p className={s.discount__description}>Get it now, up to 50% off.</p>
 
-          <Button>
+          <Button.LinkButton>
             <Handbag className="button__icon" />
             Shop now
-          </Button>
+          </Button.LinkButton>
         </div>
 
         <img src={discountImg} alt="" className={s.discount__img} />
