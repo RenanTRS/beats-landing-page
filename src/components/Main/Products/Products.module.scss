@@ -40,28 +40,4 @@
     &__price {
         font-weight: var(--font-semi-bold);
     }
-
-    &__button {
-        display: inline-block;
-        
-        background-color: var(--black-color);
-        color: var(--white-color);
-        
-        padding: .5rem;
-        border-radius: .35rem;
-        transition: .3s;
-        
-        position: absolute;
-        
-        right: .5rem;
-        bottom: .5rem;
-        
-        cursor: pointer;
-
-        &:hover {
-            background-color: var(--black-color-alt);
-        }
-    }
 }
-
-// 50:16 - video

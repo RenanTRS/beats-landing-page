@@ -97,3 +97,25 @@ img {
       column-gap: .75rem;
   }
 }
+
+.normalButton {
+  display: inline-block;
+        
+  background-color: var(--black-color);
+  color: var(--white-color);
+  
+  padding: .5rem;
+  border-radius: .35rem;
+  transition: .3s;
+  
+  position: absolute;
+  
+  right: .5rem;
+  bottom: .5rem;
+  
+  cursor: pointer;
+
+  &:hover {
+      background-color: var(--black-color-alt);
+  }
+}

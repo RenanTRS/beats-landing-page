@@ -13,12 +13,8 @@ const LinkButton = ({ children }: ButtonProps) => {
   )
 }
 
-const NormalButton = ({ styleButton, children }: ButtonProps) => {
-  return (
-    <button className={`${styleButton ? styleButton : 'button'} button__flex`}>
-      {children}
-    </button>
-  )
+const NormalButton = ({ children }: ButtonProps) => {
+  return <button className={`normalButton button__flex`}>{children}</button>
 }
 
 export const Button = { LinkButton, NormalButton }
