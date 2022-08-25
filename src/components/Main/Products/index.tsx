@@ -59,7 +59,7 @@ export const Products = () => {
 
                 <span className={s.products__price}>${product.price}</span>
 
-                <Button.NormalButton styleButton={`${s.products__button}`}>
+                <Button.NormalButton isAbsolute={true}>
                   <Handbag className="button__icon" />
                 </Button.NormalButton>
               </div>

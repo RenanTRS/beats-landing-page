@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 
 interface ButtonProps {
-  styleButton?: any
+  isAbsolute?: boolean
   children: ReactNode
 }
 
@@ -13,8 +13,14 @@ const LinkButton = ({ children }: ButtonProps) => {
   )
 }
 
-const NormalButton = ({ children }: ButtonProps) => {
-  return <button className={`normalButton button__flex`}>{children}</button>
+const NormalButton = ({ isAbsolute, children }: ButtonProps) => {
+  return (
+    <button
+      className={`${isAbsolute ? 'absolute' : ''} normalButton button__flex`}
+    >
+      {children}
+    </button>
+  )
 }
 
 export const Button = { LinkButton, NormalButton }
