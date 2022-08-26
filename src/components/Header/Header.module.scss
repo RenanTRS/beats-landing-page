@@ -8,6 +8,8 @@
 
     background: transparent;
 
+    transition: background-color .2s;
+
     .nav {
         height: var(--header-height);
         
@@ -84,4 +86,9 @@
         }
     }
     
+}
+
+/*change header's background-color when I do the scroll down*/
+.scrollHeader {
+    background-color: var(--body-color);
 }
