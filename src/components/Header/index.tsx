@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import classNames from 'classnames'
 
+import { Link } from 'react-scroll'
+
 import s from './Header.module.scss'
 import { X, SquaresFour } from 'phosphor-react'
 import logoImg from '../../assets/img/logo.svg'
@@ -46,13 +48,17 @@ export const Header = () => {
             {items.map((item) => {
               return (
                 <li className="nave__item" key={item}>
-                  <a
-                    href={`#${item.toLowerCase()}`}
+                  <Link
+                    to={`${item.toLowerCase()}`}
+                    spy={true}
+                    smooth={true}
+                    offset={0}
+                    duration={500}
                     className={s.link}
                     onClick={() => handlerMenu(false)}
                   >
                     {item}
-                  </a>
+                  </Link>
                 </li>
               )
             })}

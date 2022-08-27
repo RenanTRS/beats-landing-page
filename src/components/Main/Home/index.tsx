@@ -7,7 +7,7 @@ import { Container } from '../../Container'
 
 export const Home = () => {
   return (
-    <section className={`section`}>
+    <section className={`section`} id="home">
       <Container containerClass={s.home__container}>
         <div>
           <img src={homeImg} alt="" className={s.home__img} />

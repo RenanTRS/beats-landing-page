@@ -10,7 +10,7 @@ import { Title } from '../../Title'
 
 export const Case = () => {
   return (
-    <Section grid={true}>
+    <Section grid={true} id="case">
       <Title>Case</Title>
 
       <Container containerClass={s.case__container}>

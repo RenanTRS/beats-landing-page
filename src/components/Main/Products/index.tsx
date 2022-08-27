@@ -43,7 +43,7 @@ export const Products = () => {
   ]
 
   return (
-    <Section sectionClass={s.products} grid={false}>
+    <Section sectionClass={s.products} grid={false} id={'products'}>
       <Title titleStyle={s.products__line}>
         Chose <br /> Your Style
       </Title>

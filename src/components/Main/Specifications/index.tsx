@@ -33,7 +33,7 @@ export const Specifications = () => {
     }
   ]
   return (
-    <Section sectionClass={s.specs} grid={true}>
+    <Section sectionClass={s.specs} grid={true} id={'specs'}>
       <Title>Specs</Title>
 
       <Container containerClass={s.specs__container}>
