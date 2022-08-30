@@ -2,6 +2,14 @@
     &__container {
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
         row-gap: 2rem;
+
+        @media screen and (min-width: 767px) {
+            grid-template-columns: .4fr .7fr .7fr 1fr;
+        }
+
+        @media screen and (min-width: 1024px) {
+            padding-top: 3rem;
+        }
     }
 
     &__logo {
@@ -37,7 +45,7 @@
         border-radius: .5rem;
         
         padding: .5rem .75rem;
-        /* margin-bottom: var(--mb-2); */
+        margin-bottom: var(--mb-2);
     }
 
     &__input {
@@ -80,7 +88,9 @@
             font-size: var(--smaller-font-size);
             color: var(--text-color-light);
         }
+
+        @media screen and (min-width: 1024px) {
+            margin-top: 9rem;
+        }
     }
 }
-
-//01:01:53 - video

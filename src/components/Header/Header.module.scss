@@ -17,15 +17,27 @@
         justify-content: space-between;
         align-items: center;
 
+        @media screen and (min-width: 767px) {
+            height: calc(var(--header-height) + 1.5rem);
+        }
+
         .logo {
             display: flex;
             width: 1.5rem;
+
+            @media screen and (min-width: 767px) {
+                width: 2rem;
+            }
         }
 
         .toggle {
             font-size: 1.2rem;
             color: var(--white-color);
             cursor: pointer;
+
+            @media screen and (min-width: 767px) {
+                display: none;
+            }
         }
 
         .menu {
@@ -49,6 +61,11 @@
             flex-direction: column;
             align-items: center;
             row-gap: 1rem;
+
+            @media screen and (min-width: 767px) {
+                flex-direction: row;
+                column-gap: 3.5rem;
+            }
         }
 
         .link {
@@ -68,6 +85,11 @@
                 -webkit-background-clip: text;
                 background-clip: text;
             }
+
+            @media screen and (min-width: 767px) {
+                font-size: var(--normal-font-size);
+                text-transform: initial;
+            }
         }
 
 
@@ -80,6 +102,10 @@
             color: var(--white-color);
 
             cursor: pointer;
+
+            @media screen and (min-width: 767px) {
+                display: none;
+            }
         }
         
         .showmenu {
