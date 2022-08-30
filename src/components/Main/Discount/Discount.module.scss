@@ -7,15 +7,37 @@
         padding: 2rem 1.5rem;
         
         border-radius: .75rem;
+
+        @media screen and (min-width: 576px) {
+            grid-template-columns: repeat(2, 1fr);
+            justify-items: center;
+            align-items: center;
+        }
+
+        @media screen and (min-width: 767px) {
+            grid-template-columns: 250px max-content;
+            justify-content: center;
+            column-gap: 5rem;
+            padding: 3rem 0;
+        }
     }
 
     &__title {
         font-size: var(--h3-font-size);
         margin-bottom: var(--mb-0-75);
+
+        @media screen and (min-width: 767px) {
+            font-size: var(--h2-font-size);
+            margin-bottom: var(--mb-1);
+        }
     }
 
     &__description {
         margin-bottom: var(--mb-1);
+
+        @media screen and (min-width: 767px) {
+            margin-bottom: var(--mb-2);
+        }
     }
 
     &__img {
@@ -25,7 +47,12 @@
         top: 4rem;
         right: -11rem;
 
+        @media screen and (min-width: 576px) {
+            position: initial;
+        }
+
+        @media screen and (min-width: 1024px) {
+            width: 350px;
+        }
     }
 }
-
-/*43:51 - video*/

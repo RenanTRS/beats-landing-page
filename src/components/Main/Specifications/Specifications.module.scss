@@ -1,6 +1,12 @@
 .specs {
     &__container {
         position: relative;
+
+        @media screen and (min-width: 576px) {
+            grid-template-columns: repeat(2, 1fr);
+            justify-items: center;
+            align-items: center;
+        }
     }
 
     &__content {
@@ -36,5 +42,17 @@
         position: absolute;
         top: 2rem;
         right: -4rem;
+
+        @media screen and (max-width: 340px) {
+            width: 200px;
+        }
+
+        @media screen and (min-width: 576px) {
+            position: initial;
+        }
+
+        @media screen and (min-width: 767px) {
+            width: 300px;
+        }
     }
 }

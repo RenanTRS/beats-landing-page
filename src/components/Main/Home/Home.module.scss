@@ -1,7 +1,12 @@
 .home {
     &__container {
-        @media screen and (min-width: 768px) {
-            font-size: initial;
+        @media screen and (min-width: 576px) {
+            grid-template-columns: .8fr 1fr;
+        }
+
+        @media screen and (min-width: 767px) {
+            position: relative;
+            grid-template-columns: repeat(2, 1fr);
         }
     }
     &__img {
@@ -10,10 +15,42 @@
         position: absolute;
         top: -16rem;
         right: 1.5rem;
+
+        @media screen and (max-width: 340px) {
+            width: 200px;
+            top: -13rem;
+        }
+
+        @media screen and (min-width: 576px) {
+            top: -7rem;
+            left: 0;
+        }
+
+        @media screen and (min-width: 767px) {
+            top: -4rem;
+            left: 4rem;
+        }
+
+        @media screen and (min-width: 1024px) {
+            width: 300px;
+            top: -15rem;
+        }
     }
 
     &__data {
         padding-top: 5rem;
+        
+        @media screen and (max-width: 340px) {
+            padding-top: 1rem;
+        }
+
+        @media screen and (min-width: 576px) {
+            padding-top: 2rem;
+        }
+
+        @media screen and (min-width: 767px) {
+            padding-top: 8rem;
+        }
     }
 
     &__header {
@@ -33,6 +70,16 @@
         top: -4rem;
         left: 1rem;
         line-height: 6rem;
+
+        @media screen and (max-width: 340px) {
+            top: -4rem;
+            font-size: var(--bigger-font-size);
+        }
+
+        @media screen and (min-width: 1024px) {
+            top: -5rem;
+            left: 3.5rem;
+        }
     }
 
     &__subtitle {
@@ -45,10 +92,18 @@
         font-weight: var(--font-medium);
         margin-bottom: var(--mb-1);
     }
-
+    
     &__description {
         margin-bottom: var(--mb-2-5);
         line-height: var(--text-line-height);
+        
+        @media screen and (max-width: 340px) {
+            font-size: var(--small-font-size);   
+        }
+
+        @media screen and (min-width: 1024px) {
+            padding-right: 5rem;
+        }
     }
 
     &__price {

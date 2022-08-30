@@ -8,5 +8,9 @@
 
     &__img {
         width: 90px;
+
+        @media screen and (min-width: 1024px) {
+            width: 100px;
+        }
     }
 }

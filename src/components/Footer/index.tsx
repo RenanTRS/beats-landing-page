@@ -36,9 +36,9 @@ export const Footer = () => {
               Subscribe
             </Button.NormalButton>
           </form>
-        </div>
 
-        <FooterSocial />
+          <FooterSocial />
+        </div>
       </Container>
 
       <p className={s.footer__copy}>
