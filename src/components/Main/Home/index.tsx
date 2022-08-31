@@ -11,13 +11,16 @@ export const Home = () => {
   return (
     <section className={`section`} id="home">
       <Container containerClass={s.home__container}>
-        <motion.div
-          initial={{ y: -100, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 2, delay: 0.9 }}
-        >
-          <img src={homeImg} alt="" className={s.home__img} />
-        </motion.div>
+        <div>
+          <motion.img
+            src={homeImg}
+            alt=""
+            className={s.home__img}
+            initial={{ y: -100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 2, delay: 0.9 }}
+          />
+        </div>
 
         <div className={s.home__data}>
           <motion.div
