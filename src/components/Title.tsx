@@ -15,7 +15,7 @@ export const Title = ({ titleStyle, children }: TitleProps) => {
       initial={{ y: 60, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
       viewport={{ once: true }}
-      transition={{ duration: 1.5, delay: 0.2 }}
+      transition={{ duration: 1, delay: 0.2 }}
     >
       {children}
     </motion.h2>

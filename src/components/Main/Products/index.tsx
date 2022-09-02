@@ -13,6 +13,8 @@ import productImg5 from '../../../assets/img/products/product5.png'
 import { Handbag } from 'phosphor-react'
 import { Button } from '../../Button'
 
+import { motion } from 'framer-motion'
+
 export const Products = () => {
   const products = [
     {
@@ -51,7 +53,17 @@ export const Products = () => {
       <Container containerClass={s.products__container}>
         {products.map((product, key) => {
           return (
-            <article className={s.products__card} key={key}>
+            <motion.article
+              className={s.products__card}
+              key={key}
+              initial={{ y: -60, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 1.5,
+                delay: 0.2
+              }}
+            >
               <div className={s.products__content}>
                 <img src={product.img} alt="" className={s.products__img} />
 
@@ -63,7 +75,7 @@ export const Products = () => {
                   <Handbag className="button__icon" />
                 </Button.NormalButton>
               </div>
-            </article>
+            </motion.article>
           )
         })}
       </Container>
