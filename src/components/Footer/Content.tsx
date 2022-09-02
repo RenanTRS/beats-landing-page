@@ -1,4 +1,5 @@
 import s from './Footer.module.scss'
+import { motion } from 'framer-motion'
 
 interface ContentProps {
   title: string
@@ -7,7 +8,16 @@ interface ContentProps {
 
 const Products = ({ title, content }: ContentProps) => {
   return (
-    <div className={s.footer__content}>
+    <motion.div
+      className={s.footer__content}
+      initial={{ y: -60, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{
+        duration: 1.5,
+        delay: 0.2
+      }}
+    >
       <h3 className={s.footer__title}>{title}</h3>
 
       <ul className={s.footer__links}>
@@ -21,13 +31,22 @@ const Products = ({ title, content }: ContentProps) => {
           )
         })}
       </ul>
-    </div>
+    </motion.div>
   )
 }
 
 const Support = ({ title, content }: ContentProps) => {
   return (
-    <div className={s.footer__content}>
+    <motion.div
+      className={s.footer__content}
+      initial={{ y: -60, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{
+        duration: 1.5,
+        delay: 0.2
+      }}
+    >
       <h3 className={s.footer__title}>{title}</h3>
 
       <ul className={s.footer__links}>
@@ -41,7 +60,7 @@ const Support = ({ title, content }: ContentProps) => {
           )
         })}
       </ul>
-    </div>
+    </motion.div>
   )
 }
 

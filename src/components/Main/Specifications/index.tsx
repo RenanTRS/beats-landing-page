@@ -9,6 +9,8 @@ import { Section } from '../../Section'
 import { Container } from '../../Container'
 import { Title } from '../../Title'
 
+import { motion } from 'framer-motion'
+
 export const Specifications = () => {
   const specsData = [
     {
@@ -40,7 +42,17 @@ export const Specifications = () => {
         <div className={`${s.specs__content} grid`}>
           {specsData.map((specData) => {
             return (
-              <div key={specData.title} className={s.specs__data}>
+              <motion.div
+                key={specData.title}
+                className={s.specs__data}
+                initial={{ x: -60, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 1.5,
+                  delay: 0.2
+                }}
+              >
                 <img src={specData.img} className={s.specs__icon} alt="" />
 
                 <h3 className={s.specs__title}>{specData.title}</h3>
@@ -48,13 +60,24 @@ export const Specifications = () => {
                 <span className={s.specs__subtitle}>
                   {specData.description}
                 </span>
-              </div>
+              </motion.div>
             )
           })}
         </div>
 
         <div>
-          <img src={specsImg} alt="" className={s.specs__img} />
+          <motion.img
+            src={specsImg}
+            alt=""
+            className={s.specs__img}
+            initial={{ x: 120, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 1.5,
+              delay: 0.2
+            }}
+          />
         </div>
       </Container>
     </Section>

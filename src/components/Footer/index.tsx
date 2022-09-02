@@ -7,6 +7,8 @@ import { Button } from '../Button'
 import { FooterSocial } from './FooterSocial'
 import { Content } from './Content'
 
+import { motion } from 'framer-motion'
+
 export const Footer = () => {
   const products = ['Headphones', 'Earphones', 'Earbuds', 'Accesories']
 
@@ -15,15 +17,34 @@ export const Footer = () => {
   return (
     <footer className={`${s.footer} section`}>
       <Container containerClass={s.footer__container}>
-        <a href="#" className={s.footer__logo}>
+        <motion.a
+          href="#"
+          className={s.footer__logo}
+          initial={{ y: -60, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 1.5,
+            delay: 0.2
+          }}
+        >
           <img src={logoImg} alt="" className={s.footer__img} />
-        </a>
+        </motion.a>
 
         <Content.Products title={'Products'} content={products} />
 
         <Content.Support title={'Suport'} content={suports} />
 
-        <div className={s.footer__content}>
+        <motion.div
+          className={s.footer__content}
+          initial={{ y: -60, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 1.5,
+            delay: 0.2
+          }}
+        >
           <form action="" className={s.footer__form}>
             <input
               type="email"
@@ -38,10 +59,19 @@ export const Footer = () => {
           </form>
 
           <FooterSocial />
-        </div>
+        </motion.div>
       </Container>
 
-      <p className={s.footer__copy}>
+      <motion.p
+        className={s.footer__copy}
+        initial={{ y: -60, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 1.5,
+          delay: 0.2
+        }}
+      >
         <a
           href="https://www.youtube.com/c/Bedimcode/"
           target="_blank"
@@ -49,7 +79,7 @@ export const Footer = () => {
         >
           &#169; Bedimcode. All right reserved
         </a>
-      </p>
+      </motion.p>
     </footer>
   )
 }
